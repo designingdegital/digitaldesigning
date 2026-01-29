@@ -56,14 +56,21 @@ body {
   font-size: 18px;
 }
 
-.hero-actions {
+/* .hero-actions {
   margin-top: 30px;
   display: flex;
   justify-content: center;
   gap: 20px;
+} */
+.hero-actions {
+  position: relative;
+  display: inline-flex;
+  background: #eef2ff;
+  padding: 6px;
+  border-radius: 50px;
 }
 
-.btn {
+/* .btn {
   padding: 14px 30px;
   border-radius: 30px;
   font-weight: 600;
@@ -71,6 +78,27 @@ body {
   cursor: pointer;
   text-decoration: none;
   transition: 0.3s ease;
+} */
+.btn {
+  position: relative;
+  padding: 14px 34px;
+  border: none;
+  background: transparent;
+  font-weight: 600;
+  cursor: pointer;
+  z-index: 2;
+  color: #2563eb;
+}
+.btn-slider {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  height: calc(100% - 12px);
+  width: 50%;
+  background: linear-gradient(90deg, #2563eb, #9333ea);
+  border-radius: 40px;
+  transition: all 0.35s ease;
+  z-index: 1;
 }
 
 .btn.primary {
@@ -92,6 +120,13 @@ body {
 .btn.secondary:hover {
   background: #2563eb;
   color: #fff;
+}
+.btn.active {
+  color: #fff;
+}
+
+.btn:active {
+  transform: scale(0.96);
 }
 
 /* ================= WAVES ================= */
