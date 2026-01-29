@@ -1,12 +1,12 @@
-function scrollToSection(id) {
-  const el = document.getElementById(id);
-  if (!el) return;
+// function scrollToSection(id) {
+//   const el = document.getElementById(id);
+//   if (!el) return;
 
-  el.scrollIntoView({
-    behavior: "smooth",
-    block: "start"
-  });
-}
+//   el.scrollIntoView({
+//     behavior: "smooth",
+//     block: "start"
+//   });
+// }
 // Smooth scroll
 function scrollToServices() {
   document.getElementById("services").scrollIntoView({ behavior: "smooth" });
