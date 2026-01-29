@@ -147,6 +147,14 @@ body {
   color: #2563eb;
   transition: all 0.3s ease;
 }
+/* FIX anchor button appearance */
+.hero-actions .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;   /* remove underline */
+  line-height: 1;          /* fix text height */
+}
 
 /* hover */
 .hero-actions .btn:hover {
