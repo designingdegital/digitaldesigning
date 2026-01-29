@@ -399,7 +399,7 @@ body {
   color: #4f46e5;
 }
   /* ================= BACK BUTTON ================= */
-.back-fixed {
+/* .back-fixed {
   position: fixed;
   top: 30px;
   left: 30px;
@@ -417,7 +417,7 @@ body {
 }
 
 /* outer ring */
-.styled-wrapper .button::before {
+/* .styled-wrapper .button::before {
   content: "";
   position: absolute;
   inset: 6px;
@@ -426,58 +426,46 @@ body {
   transition: 0.4s ease;
 }
 
-/* gradient ring */
-.styled-wrapper .button::after {
-  content: "";
-  position: absolute;
-  inset: 6px;
+/* ================= BACK BUTTON (SUB PAGES) ================= */
+  .back-btn {
+  position: fixed;
+  top: 24px;
+  left: 24px;
+  width: 56px;
+  height: 56px;
   border-radius: 50%;
-  border: 4px solid transparent;
-  background: linear-gradient(90deg, #2563eb, #9333ea) border-box;
-  mask:
-    linear-gradient(#fff 0 0) padding-box,
-    linear-gradient(#fff 0 0);
-  mask-composite: exclude;
-  transform: scale(1.3);
-  opacity: 0;
-  transition: 0.4s ease;
-}
-
-.styled-wrapper .button:hover::before {
-  opacity: 0;
-  transform: scale(0.7);
-}
-
-.styled-wrapper .button:hover::after {
-  opacity: 1;
-  transform: scale(1);
-}
-
-/* arrow animation */
-.styled-wrapper .button-box {
+  background: linear-gradient(135deg, #2563eb, #9333ea);
   display: flex;
-  position: absolute;
-  top: 0;
-  left: 0;
-  transition: transform 0.4s ease;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 12px 30px rgba(99,102,241,0.35);
+  text-decoration: none;
+  z-index: 1000;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.styled-wrapper .button:hover .button-box {
-  transform: translateX(-60px);
+.back-btn:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 18px 40px rgba(99,102,241,0.45);
 }
 
-.styled-wrapper .button-elem {
-  width: 28px;
-  height: 28px;
-  margin: 22px;
+.back-icon {
+  width: 26px;
+  height: 26px;
+  fill: #fff;
 }
 
-.arrow-icon {
-  fill: #2563eb;
-  transition: fill 0.3s ease;
-}
+@media (max-width: 768px) {
+  .back-btn {
+    width: 48px;
+    height: 48px;
+    top: 16px;
+    left: 16px;
+  }
 
-.styled-wrapper .button:hover .arrow-icon {
-  fill: #9333ea;
+  .back-icon {
+    width: 22px;
+    height: 22px;
+  }
 }
 }
