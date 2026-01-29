@@ -79,7 +79,7 @@ body {
   text-decoration: none;
   transition: 0.3s ease;
 } */
-.btn {
+/* .btn {
   position: relative;
   padding: 14px 34px;
   border: none;
@@ -88,8 +88,8 @@ body {
   cursor: pointer;
   z-index: 2;
   color: #2563eb;
-}
-.btn-slider {
+} */
+/* .btn-slider {
   position: absolute;
   top: 6px;
   left: 6px;
@@ -99,9 +99,9 @@ body {
   border-radius: 40px;
   transition: all 0.35s ease;
   z-index: 1;
-}
+} */
 
-.btn.primary {
+/* .btn.primary {
   background: linear-gradient(90deg, #2563eb, #9333ea);
   color: #fff;
   box-shadow: 0 10px 30px rgba(99,102,241,0.3);
@@ -109,9 +109,9 @@ body {
 
 .btn.primary:hover {
   transform: translateY(-2px);
-}
+} */
 
-.btn.secondary {
+/* .btn.secondary {
   background: #fff;
   border: 2px solid #2563eb;
   color: #2563eb;
@@ -120,13 +120,49 @@ body {
 .btn.secondary:hover {
   background: #2563eb;
   color: #fff;
-}
-.btn.active {
+} */
+/* .btn.active {
   color: #fff;
+} */
+
+/* .btn:active {
+  transform: scale(0.96);
+} */
+.hero-actions {
+  display: inline-flex;
+  background: #eef2ff;
+  padding: 6px;
+  border-radius: 50px;
+  gap: 6px;
 }
 
-.btn:active {
+/* button base */
+.hero-actions .btn {
+  padding: 14px 34px;
+  border-radius: 40px;
+  border: none;
+  background: transparent;
+  font-weight: 600;
+  cursor: pointer;
+  color: #2563eb;
+  transition: all 0.3s ease;
+}
+
+/* hover */
+.hero-actions .btn:hover {
+  background: rgba(37, 99, 235, 0.1);
+}
+
+/* active (clicked) */
+.hero-actions .btn:active {
   transform: scale(0.96);
+}
+
+/* primary look (first button default) */
+.hero-actions .btn:first-child {
+  background: linear-gradient(90deg, #2563eb, #9333ea);
+  color: #fff;
+  box-shadow: 0 10px 25px rgba(99,102,241,0.35);
 }
 
 /* ================= WAVES ================= */
