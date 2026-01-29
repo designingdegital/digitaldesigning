@@ -2,45 +2,78 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Digital Designing</title>
 
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<!-- BACKGROUND WAVES -->
-<div class="bg-waves">
-  <svg viewBox="0 0 1440 600" preserveAspectRatio="none">
-    <path id="wave1"
-      d="M0,350 C240,300 480,400 720,370 960,340 1200,280 1440,320 L1440,600 L0,600 Z"
-      fill="rgba(37,99,235,0.18)"
-    />
-    <path id="wave2"
-      d="M0,380 C300,340 600,420 900,390 1200,360 1440,300 1440,300 L1440,600 L0,600 Z"
-      fill="rgba(147,51,234,0.12)"
-    />
-  </svg>
-</div>
+
   <!-- HERO SECTION -->
   <section class="hero">
-    <img src="images/logo.png" alt="Digital Designing Logo" class="hero-logo">
+    <img src="logo.png" alt="Digital Designing Logo" class="hero-logo" />
 
     <h1>
-      DIGITAL <span>DESIGNING</span>
+      <span class="black">DIGITAL</span>
+      <span class="gradient">DESIGNING</span>
     </h1>
 
-    <p>
-      Creative & Professional Design Solutions for Modern Businesses
-    </p>
+    <p>Creative & Professional Design Solutions for Modern Businesses</p>
 
     <div class="hero-actions">
-      <a href="#services" class="btn primary">View Services</a>
-      <a href="#contact" class="btn secondary">Contact Us</a>
+      <button class="btn primary" onclick="scrollToServices()">View Services</button>
+      <a class="btn secondary" href="tel:9741342576">Contact Us</a>
+    </div>
+
+    <!-- SVG WAVES -->
+    <svg class="waves" viewBox="0 0 1440 600" preserveAspectRatio="none">
+      <path id="wave1"></path>
+      <path id="wave2"></path>
+    </svg>
+  </section>
+
+  <!-- SERVICES SECTION -->
+  <section id="services" class="services">
+    <div class="services-header">
+      <h2>SERVICES</h2>
+      <img src="logo.png" class="top-logo" />
+    </div>
+
+    <div class="service-grid">
+      <div class="service-card" onclick="openModal('Logo Designing')">Logo Designing</div>
+      <div class="service-card" onclick="openModal('Business Card Design')">Business Card</div>
+      <div class="service-card" onclick="openModal('Wedding Design')">Wedding Design</div>
+      <div class="service-card" onclick="openModal('Poster Design')">Poster Design</div>
+      <div class="service-card" onclick="openModal('Banner & Flex')">Banner & Flex</div>
+      <div class="service-card" onclick="openModal('Website Design')">Website Maker</div>
+    </div>
+
+    <div class="service-info">
+      <h3>What We Provide</h3>
+      <p>
+        Logo Designing • Business Cards • Visiting Cards • Wedding Designs • Posters • Banners • Flex Designs • Website Creation
+      </p>
+      <p class="price">
+        Price Range: <strong>₹100 – ₹1000</strong> <br />
+        <span>(Negotiable • Customization Available)</span>
+      </p>
     </div>
   </section>
 
+  <!-- MODAL -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">×</span>
+      <h2 id="modalTitle"></h2>
+      <p>High-quality custom design tailored to your needs.</p>
+      <p><strong>Price:</strong> ₹100 – ₹1000 (Negotiable)</p>
+      <p><strong>Customization:</strong> Available</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
