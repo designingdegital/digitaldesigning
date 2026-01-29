@@ -6,7 +6,11 @@
 }
 
 body {
-  background: linear-gradient(180deg, #f7f9fc, #ffffff);
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, rgba(147,51,234,0.15), transparent 40%),
+    radial-gradient(circle at bottom right, rgba(37,99,235,0.18), transparent 45%),
+    linear-gradient(180deg, #ffffff, #f7f9fc);
   color: #111;
 }
 
@@ -18,11 +22,11 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 40px;
+  padding: 40px 20px;
 }
 
 .hero-logo {
-  width: 90px;
+  width: 110px;
   margin-bottom: 25px;
 }
 
@@ -30,6 +34,7 @@ body {
   font-size: 56px;
   font-weight: 800;
   letter-spacing: 3px;
+  margin-bottom: 15px;
 }
 
 .hero h1 span {
@@ -39,31 +44,44 @@ body {
 }
 
 .hero p {
-  max-width: 600px;
+  max-width: 620px;
   font-size: 18px;
-  margin-top: 20px;
   color: #555;
+  margin-bottom: 35px;
 }
 
+/* BUTTONS */
 .hero-actions {
-  margin-top: 35px;
   display: flex;
   gap: 20px;
 }
 
 .btn {
-  padding: 14px 28px;
+  padding: 14px 32px;
   border-radius: 30px;
   text-decoration: none;
   font-weight: 600;
+  font-size: 16px;
+  transition: all 0.3s ease;
 }
 
 .btn.primary {
-  background: #2563eb;
+  background: linear-gradient(90deg, #2563eb, #4f46e5);
   color: white;
+  box-shadow: 0 10px 25px rgba(37,99,235,0.3);
+}
+
+.btn.primary:hover {
+  transform: translateY(-3px);
 }
 
 .btn.secondary {
   border: 2px solid #2563eb;
   color: #2563eb;
+  background: white;
+}
+
+.btn.secondary:hover {
+  background: #2563eb;
+  color: white;
 }
