@@ -8,9 +8,7 @@
 //   });
 // }
 // Smooth scroll
-function scrollToServices() {
-  document.getElementById("services").scrollIntoView({ behavior: "smooth" });
-}
+
 
 // Modal
 function openModal(title, imageName) {
