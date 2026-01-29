@@ -4,15 +4,17 @@ function scrollToServices() {
 }
 
 // Modal
-function openModal(title) {
+function openModal(title, imageName) {
   document.getElementById("modalTitle").innerText = title;
-  document.getElementById("modal").style.display = "flex";
+  document.getElementById("modalImage").src =
+    "./images/services/" + imageName;
+
+  document.getElementById("serviceModal").style.display = "flex";
 }
 
 function closeModal() {
-  document.getElementById("modal").style.display = "none";
+  document.getElementById("serviceModal").style.display = "none";
 }
-
 // Wave animation
 const wave1 = document.getElementById("wave1");
 const wave2 = document.getElementById("wave2");
