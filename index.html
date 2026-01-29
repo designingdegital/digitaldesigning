@@ -24,10 +24,15 @@
     Creative & Professional Design Solutions for Modern Businesses
   </p>
 
-  <div class="hero-actions">
-    <a href="#services" class="btn primary">View Services</a>
-    <a href="#contact" class="btn secondary">Contact Us</a>
-  </div>
+ <div class="hero-actions">
+  <button class="hero-btn active" onclick="scrollToSection('services')">
+    View Services
+  </button>
+
+  <button class="hero-btn" onclick="scrollToSection('contact')">
+    Contact Us
+  </button>
+</div>
 
   <!-- SVG WAVES -->
   <svg class="waves" viewBox="0 0 1440 600" preserveAspectRatio="none">
@@ -104,17 +109,6 @@
 <!-- ================= JS ================= -->
 <script src="./js/waves.js"></script>
 <script src="./js/script.js"></script>
-<div class="hero-actions">
-  <div class="btn-slider"></div>
-
-  <button class="btn active" onclick="moveBtn(this); scrollToSection('services')">
-    View Services
-  </button>
-
-  <button class="btn" onclick="moveBtn(this); scrollToSection('contact')">
-    Contact Us
-  </button>
-</div>
 
 </body>
 </html>
