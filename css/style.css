@@ -381,4 +381,21 @@ body {
   .corner-logo {
     width: 65px;
   }
+  /* ================= SERVICE PAGE PRICE ================= */
+
+.service-price {
+  margin: 30px auto 50px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+  color: #2563eb;
+}
+
+.service-price em {
+  display: block;
+  margin-top: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #4f46e5;
+}
 }
