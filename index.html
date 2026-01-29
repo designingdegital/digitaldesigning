@@ -2,78 +2,111 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Digital Designing</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="style.css" />
+  <!-- CSS -->
+  <link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
-<script src="js/waves.js"></script>
-  <!-- HERO SECTION -->
-  <section class="hero">
-    <img src="logo.png" alt="Digital Designing Logo" class="hero-logo" />
 
-    <h1>
-      <span class="black">DIGITAL</span>
-      <span class="gradient">DESIGNING</span>
-    </h1>
+<!-- ================= HERO SECTION ================= -->
+<section class="hero" id="home">
+  <img src="./images/logo.png" alt="Digital Designing Logo" class="hero-logo">
 
-    <p>Creative & Professional Design Solutions for Modern Businesses</p>
+  <h1>
+    <span class="dark">DIGITAL</span>
+    <span class="gradient">DESIGNING</span>
+  </h1>
 
-    <div class="hero-actions">
-      <button class="btn primary" onclick="scrollToServices()">View Services</button>
-      <a class="btn secondary" href="tel:9741342576">Contact Us</a>
-    </div>
+  <p>
+    Creative & Professional Design Solutions for Modern Businesses
+  </p>
 
-    <!-- SVG WAVES -->
-    <svg class="waves" viewBox="0 0 1440 600" preserveAspectRatio="none">
-      <path id="wave1"></path>
-      <path id="wave2"></path>
-    </svg>
-  </section>
-
-  <!-- SERVICES SECTION -->
-  <section id="services" class="services">
-    <div class="services-header">
-      <h2>SERVICES</h2>
-      <img src="logo.png" class="top-logo" />
-    </div>
-
-    <div class="service-grid">
-      <div class="service-card" onclick="openModal('Logo Designing')">Logo Designing</div>
-      <div class="service-card" onclick="openModal('Business Card Design')">Business Card</div>
-      <div class="service-card" onclick="openModal('Wedding Design')">Wedding Design</div>
-      <div class="service-card" onclick="openModal('Poster Design')">Poster Design</div>
-      <div class="service-card" onclick="openModal('Banner & Flex')">Banner & Flex</div>
-      <div class="service-card" onclick="openModal('Website Design')">Website Maker</div>
-    </div>
-
-    <div class="service-info">
-      <h3>What We Provide</h3>
-      <p>
-        Logo Designing • Business Cards • Visiting Cards • Wedding Designs • Posters • Banners • Flex Designs • Website Creation
-      </p>
-      <p class="price">
-        Price Range: <strong>₹100 – ₹1000</strong> <br />
-        <span>(Negotiable • Customization Available)</span>
-      </p>
-    </div>
-  </section>
-
-  <!-- MODAL -->
-  <div id="modal" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal()">×</span>
-      <h2 id="modalTitle"></h2>
-      <p>High-quality custom design tailored to your needs.</p>
-      <p><strong>Price:</strong> ₹100 – ₹1000 (Negotiable)</p>
-      <p><strong>Customization:</strong> Available</p>
-    </div>
+  <div class="hero-actions">
+    <a href="#services" class="btn primary">View Services</a>
+    <a href="#contact" class="btn secondary">Contact Us</a>
   </div>
 
-  <script src="script.js"></script>
+  <!-- SVG WAVES -->
+  <svg class="waves" viewBox="0 0 1440 600" preserveAspectRatio="none">
+    <path id="wave1" fill="#e0e7ff" opacity="0.9"></path>
+    <path id="wave2" fill="#c7d2fe" opacity="0.8"></path>
+  </svg>
+</section>
+
+<!-- ================= SERVICES SECTION ================= -->
+<section class="services-section" id="services">
+
+  <div class="services-header">
+    <h2>SERVICES</h2>
+    <img src="./images/logo.png" alt="Logo" class="corner-logo">
+  </div>
+
+  <div class="services-grid">
+
+    <div class="service-card" onclick="openModal('Logo Designing')">
+      <h3>Logo Designing</h3>
+    </div>
+
+    <div class="service-card" onclick="openModal('Business Card')">
+      <h3>Business Card</h3>
+    </div>
+
+    <div class="service-card" onclick="openModal('Wedding Design')">
+      <h3>Wedding Design</h3>
+    </div>
+
+    <div class="service-card" onclick="openModal('Poster & Banner')">
+      <h3>Poster & Banner</h3>
+    </div>
+
+    <div class="service-card" onclick="openModal('Flex Design')">
+      <h3>Flex Design</h3>
+    </div>
+
+    <div class="service-card" onclick="openModal('Website Design')">
+      <h3>Website Design</h3>
+    </div>
+
+  </div>
+
+  <div class="services-info">
+    <p><strong>What we provide:</strong></p>
+    <p>
+      Logo Designing • Business Cards • Wedding Designs • Posters • Banners • Flex Designs • Websites
+    </p>
+    <p class="price">
+      <strong>Price Range:</strong> ₹100 – ₹1000 <br>
+      <em>(Negotiable & Customization Available)</em>
+    </p>
+  </div>
+</section>
+
+<!-- ================= MODAL ================= -->
+<div class="modal" id="serviceModal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">×</span>
+    <h2 id="modalTitle"></h2>
+    <p>
+      High-quality professional design.<br><br>
+      <strong>Price:</strong> ₹100 – ₹1000 (Negotiable)<br>
+      <strong>Customization:</strong> Available
+    </p>
+  </div>
+</div>
+
+<!-- ================= CONTACT ================= -->
+<section class="contact" id="contact">
+  <h2>Contact Us</h2>
+  <p>Email: designingdegital@gmail.com</p>
+  <p>Phone: 9741342576</p>
+</section>
+
+<!-- ================= JS ================= -->
+<script src="./js/waves.js"></script>
+<script src="./js/script.js"></script>
+
 </body>
 </html>
