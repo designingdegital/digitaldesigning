@@ -468,4 +468,8 @@ body {
     height: 22px;
   }
 }
+  #services,
+#contact {
+  scroll-margin-top: 80px;
+}
 }
